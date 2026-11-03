@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: mt1-labexam
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm run start:web
+    healthCheckPath: /health

@@ -6,7 +6,11 @@
   "description": "Library book management practical using Node.js HTTP, FS, and Express",
   "scripts": {
     "start:http": "node httpServer.js",
-    "start:api": "node expressApp.js"
+    "start:api": "node expressApp.js",
+    "start:web": "node webApp.js"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
     "express": "^5.1.0"

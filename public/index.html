@@ -138,7 +138,7 @@
       <section class="cards" aria-label="Application routes">
         <article class="card">
           <h2>Node.js HTTP server</h2>
-          <p>Runs on port 3000 and serves this page from the public folder using the FS module.</p>
+          <p>The standalone Node.js server serves this page from the public folder using the FS module.</p>
           <div class="routes">
             <span class="method">GET</span><a href="/books"><code>/books</code> · list books</a>
             <span class="method">GET</span><a href="/about"><code>/about</code> · about</a>
@@ -148,7 +148,7 @@
 
         <article class="card">
           <h2>Express REST API</h2>
-          <p>Start the API on port 4000 to create, read, update, and delete books.</p>
+          <p>View books or use the API to create, read, update, and delete them.</p>
           <div class="routes">
             <span class="method">GET</span><span><code>/books</code> · all books</span>
             <span class="method">GET</span><span><code>/books/:id</code> · one book</span>
@@ -159,10 +159,10 @@
         </article>
 
         <article class="card">
-          <h2>Run both servers</h2>
-          <p>Open two terminals in the project folder and run:</p>
-          <p><code>npm run start:http</code></p>
-          <p><code>npm run start:api</code></p>
+          <h2>Live book list</h2>
+          <p>Open the book collection from this website:</p>
+          <p><a href="/books"><code>View all books</code></a></p>
+          <p>Local practical commands: <code>npm run start:http</code> and <code>npm run start:api</code>.</p>
         </article>
       </section>
     </main>
