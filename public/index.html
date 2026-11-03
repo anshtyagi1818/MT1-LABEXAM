@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f2eb">
+    <title>Library Desk | Book Management</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        color: #23332d;
+        background: #f5f2eb;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        background:
+          radial-gradient(ellipse at 90% 5%, #e8ede1 0, transparent 30rem),
+          #f5f2eb;
+      }
+
+      header, main, footer {
+        width: min(1080px, calc(100% - 40px));
+        margin-inline: auto;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 25px;
+        border-bottom: 1px solid #dce1d7;
+      }
+
+      .brand { font-weight: 750; letter-spacing: .03em; }
+      .status { color: #55705f; font-size: .9rem; }
+
+      main { padding-block: 72px 64px; }
+
+      .eyebrow {
+        color: #607966;
+        font-size: .76rem;
+        font-weight: 750;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 700px;
+        margin: 14px 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.7rem, 7vw, 5.2rem);
+        font-weight: 500;
+        letter-spacing: -.055em;
+        line-height: 1.02;
+      }
+
+      .intro {
+        max-width: 610px;
+        color: #62706a;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin-top: 48px;
+      }
+
+      .card {
+        min-height: 190px;
+        padding: 23px;
+        border: 1px solid #dce1d7;
+        border-radius: 12px;
+        background: #fffefa;
+      }
+
+      .card h2 { margin: 0 0 10px; font-size: 1.1rem; }
+      .card p { color: #62706a; line-height: 1.6; }
+
+      code {
+        padding: 2px 6px;
+        border-radius: 4px;
+        background: #edf0e9;
+        color: #314a39;
+      }
+
+      .routes {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px 14px;
+        align-items: center;
+        margin-top: 15px;
+      }
+
+      .method {
+        color: #52705c;
+        font-size: .76rem;
+        font-weight: 750;
+      }
+
+      a { color: #41694d; }
+
+      footer {
+        padding-block: 18px 30px;
+        border-top: 1px solid #dce1d7;
+        color: #748078;
+        font-size: .86rem;
+      }
+
+      @media (max-width: 520px) {
+        header, main, footer { width: min(100% - 28px, 1080px); }
+        main { padding-top: 52px; }
+        .status { font-size: .78rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand">LIBRARY DESK</div>
+      <div class="status">Node.js practical · HTTP + Express</div>
+    </header>
+
+    <main>
+      <p class="eyebrow">A small space for big ideas</p>
+      <h1>Every book has a place.</h1>
+      <p class="intro">
+        A library book management application demonstrating Node.js HTTP routing,
+        static file serving with the FS module, and a REST API built with Express.
+      </p>
+
+      <section class="cards" aria-label="Application routes">
+        <article class="card">
+          <h2>Node.js HTTP server</h2>
+          <p>Runs on port 3000 and serves this page from the public folder using the FS module.</p>
+          <div class="routes">
+            <span class="method">GET</span><a href="/books"><code>/books</code> · list books</a>
+            <span class="method">GET</span><a href="/about"><code>/about</code> · about</a>
+            <span class="method">GET</span><a href="/home"><code>/home</code> · this page</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Express REST API</h2>
+          <p>Start the API on port 4000 to create, read, update, and delete books.</p>
+          <div class="routes">
+            <span class="method">GET</span><span><code>/books</code> · all books</span>
+            <span class="method">GET</span><span><code>/books/:id</code> · one book</span>
+            <span class="method">POST</span><span><code>/books</code> · add a book</span>
+            <span class="method">PUT</span><span><code>/books/:id</code> · update a book</span>
+            <span class="method">DELETE</span><span><code>/books/:id</code> · remove a book</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Run both servers</h2>
+          <p>Open two terminals in the project folder and run:</p>
+          <p><code>npm run start:http</code></p>
+          <p><code>npm run start:api</code></p>
+        </article>
+      </section>
+    </main>
+
+    <footer>Book records are stored in JavaScript arrays for this practical.</footer>
+  </body>
+</html>
