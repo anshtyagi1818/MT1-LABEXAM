@@ -1,0 +1,14 @@
+{
+  "name": "mt1-labexam-library-management",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Library book management practical using Node.js HTTP, FS, and Express",
+  "scripts": {
+    "start:http": "node httpServer.js",
+    "start:api": "node expressApp.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
