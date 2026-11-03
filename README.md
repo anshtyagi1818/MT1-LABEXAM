@@ -26,9 +26,9 @@ The HTTP server listens on `http://localhost:3000`; the Express API listens on `
 
 ## Public deployment on Render
 
-The Render Blueprint in `render.yaml` deploys the complete website and REST API as one web service. In Render, choose **New → Blueprint**, connect the `anshtyagi1818/MT1-LABEXAM` GitHub repository, and apply the `render.yaml` configuration. Render will provide the public HTTPS URL after the first deployment finishes. The free instance can sleep when idle and take a short time to wake up.
+The Render Blueprint in `render.yaml` deploys the complete website and REST API as one web service. In Render, choose **New → Blueprint**, enter `https://github.com/anshtyagi1818/MT1-LABEXAM` under **Public Git Repository**, and continue to apply the `render.yaml` configuration. Render will provide the public HTTPS URL after deployment.
 
-The deployment uses `webApp.js` and the `PORT` provided by Render. The separate `httpServer.js` and `expressApp.js` exam servers remain available through the local commands above.
+The deployment uses `webApp.js` and the `PORT` provided by Render. The separate `httpServer.js` and `expressApp.js` exam servers remain available through the local commands above. Because this service uses a public repository URL rather than a connected Git integration, new code commits do not deploy automatically; trigger a manual deploy from the Render dashboard after pushing code changes. The free instance can sleep when idle and take a short time to wake up.
 
 ## HTTP and FS routes
 
